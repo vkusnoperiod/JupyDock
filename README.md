@@ -7,13 +7,13 @@ A reference deployment of JupyterHub, a multi-user Jupyter Notebook environment,
 - Creating a quick-to-launch JupyterHub demo environment.
 - Providing small groups, teams, or departments with a multi-user Jupyter Notebook environment.
 
-## Quick Start
+## Copy
 
 - Clone repo: git clone https://github.com/vkusnoperiod/JupyDock.git
-- DockerSpawner is used to provide each user with ditstinguished container on the same host.
 
 ## Development
 
+- DockerSpawner is used to provide each user with ditstinguished container on the same host.
 - You can easily use JupyterHub-Docker with custom directories, ports and other.
 - To edit JupyterHub port, replace `80` with any other port number you need 'in' docker-compose.yml file.
 - Im using JupyterHub Native Authenticator to authenticate users.
