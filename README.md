@@ -9,8 +9,7 @@ A reference deployment of JupyterHub, a multi-user Jupyter Notebook environment,
 
 ## Quick Start
 
-Clone repo:
-- git clone https://github.com/vkusnoperiod/JupyDock.git
+- Clone repo: git clone https://github.com/vkusnoperiod/JupyDock.git
 - DockerSpawner is used to provide each user with ditstinguished container on the same host.
 
 ## Development
