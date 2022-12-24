@@ -1,0 +1,44 @@
+version: "3"
+
+services:
+  hub:
+    build:
+      context: .
+      dockerfile: Dockerfile.jupyterhub
+      args:
+        JUPYTERHUB_VERSION: 3.0.0
+    #Перезапуск в случае сбоев
+    restart: always
+    #Образ из инетика
+    image: jupyterhub
+    #Красивое имя контейнера
+    container_name: jupyterhub
+    networks:
+      - jupyterhub-network
+    #Эти 3 cтрочки нашел в инете, тоже очень полезные
+    volumes:
+      - "./jupyterhub_config.py:/srv/jupyterhub/jupyterhub_config.py:ro"
+      - "/var/run/docker.sock:/var/run/docker.sock:rw"
+      - "jupyterhub-data:/data"
+    #Наш порт 8000, порт контейнера 80
+    ports:
+      - "80:8000"
+    environment:
+      # Юзернэйм админа будет admin
+      JUPYTERHUB_ADMIN: admin
+      # Подключаем контейнеры к сети
+      DOCKER_NETWORK_NAME: jupyterhub-network
+      # Контейнеры для юзеров
+      DOCKER_NOTEBOOK_IMAGE: jupyter/minimal-notebook:latest
+      DOCKER_NOTEBOOK_DIR: /home/jovyan/work
+      # Команда Run
+      DOCKER_SPAWN_CMD: start-singleuser.sh
+    command: >
+      jupyterhub -f /srv/jupyterhub/jupyterhub_config.py
+#Маунтим
+volumes:
+  jupyterhub-data:
+#Имя сети
+networks:
+  jupyterhub-network:
+    name: jupyterhub-network
