@@ -1,4 +1,4 @@
-FROM jupyterhub/jupyterhub:$JUPYTERHUB_VERSION
+FROM jupyterhub/jupyterhub:latest
 
 ARG JUPYTERHUB_VERSION
 
