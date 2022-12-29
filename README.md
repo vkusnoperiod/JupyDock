@@ -10,7 +10,7 @@ A reference deployment of JupyterHub, a multi-user Jupyter Notebook environment,
 ## Copy
 
 - Clone repository below:
-git clone https://github.com/vkusnoperiod/JupyDock.git
+`git clone https://github.com/vkusnoperiod/JupyDock.git`
 
 ## Running 
 
