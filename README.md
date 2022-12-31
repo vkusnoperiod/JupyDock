@@ -16,8 +16,8 @@ A reference deployment of JupyterHub, a multi-user Jupyter Notebook environment,
 
 Following steps to start JupyDock:
  - Download all required things (written in requirements.txt)
- - Create a Docker-Compose by witing this command in shell `docker-compose build`.
- - Start a container using command `docker-compose up`. You can also write -d for running in detached mode or other optional things that are provided by docker environment.
+ - Create a Docker-Compose by witing this command in shell `docker-compose build`
+ - Start a container using command `docker-compose up` You can also write -d `docker-compose up -d` for running in detached mode or other optional things that are provided by docker environment.
  - Once you have done the following steps, open any browser and go to this page localhost:80
 
 
