@@ -25,11 +25,10 @@ Following steps to start JupyDock:
 
 - DockerSpawner is used to provide each user with ditstinguished container on the same host.
 - You can easily use JupyDock with custom directories, ports and other.
-- To edit JupyterHub port, replace `80` with any other port number you need in docker-compose.yml file.
 - Im using JupyterHub Native Authenticator to authenticate users.
 
 ## Edit
 
 - In build script you can change image name or add any needed flags.
-
+- To edit JupyterHub port, replace `80` with any other port number you need in docker-compose.yml file.
 
